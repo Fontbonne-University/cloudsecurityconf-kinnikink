@@ -22,6 +22,18 @@ class RegistrationController {
     @Autowired
     AttendeeService attendeeService;
 
+    @RequestMapping("/ver")
+    @ResponseBody
+    String getVersion()
+    {
+        return "ver 2.0";
+    }
+
+    @RequestMapping("/landing")
+    String getLanding()
+    {
+        return "landing";
+    }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     String home(Model model) {
